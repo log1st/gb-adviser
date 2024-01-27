@@ -36,6 +36,8 @@ bun run dev
 
 # Build
 ```bash
+# к сожалению, сторибук накосячили что-то в себе, поэтому он билдится только при наличии NodeJS.
+# приложение же, спокойно билдится только bun
 bun run build
 
 #then
@@ -47,4 +49,19 @@ bun run start
 # navigate to https://localhost:4173 for app 
 # and https://localhost:8080 for storybook
 # ports might be changed if currently in use
+```
+
+# Dev and Build separately
+```bash
+# app
+cd apps/client
+bun run dev
+# or
+bun run build
+
+# storybook
+cd packages/storybook
+bun run dev
+# or
+bun run build
 ```
