@@ -4,6 +4,7 @@ import { getAuthRoute, getIndexRoute, getInfoWikiRoute } from "./routes.ts";
 import { AuthorizedGuard } from "../containers/AuthorizedGuard.tsx";
 import MainLayout from "../layouts/MainLayout.tsx";
 import { RootLayout } from "../layouts/RootLayout.tsx";
+import ErrorPage from "../pages/error.tsx";
 
 const InfoWikiPage = lazy(() => import("../pages/info/wiki.tsx"));
 const AuthPage = lazy(() => import("../pages/auth.tsx"));
@@ -15,11 +16,10 @@ export function AppRouterProvider() {
         path: getIndexRoute().pathname,
         element: (
           <Suspense>
-            <RootLayout>
-              <Outlet />
-            </RootLayout>
+            <Outlet />
           </Suspense>
         ),
+        errorElement: <ErrorPage />,
         children: [
           {
             path: getIndexRoute().pathname,
@@ -52,5 +52,9 @@ export function AppRouterProvider() {
     ]),
   );
 
-  return <RouterProvider router={router} />;
+  return (
+    <RootLayout>
+      <RouterProvider router={router} />
+    </RootLayout>
+  );
 }

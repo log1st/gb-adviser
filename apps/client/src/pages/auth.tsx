@@ -11,13 +11,14 @@ export default function AuthPage() {
   };
 
   return (
-    <UiButton
+    <div
       style={{
-        margin: "auto",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
-      onClick={signIn}
     >
-      Sign in
-    </UiButton>
+      <UiButton onClick={signIn}>Sign in</UiButton>
+    </div>
   );
 }
