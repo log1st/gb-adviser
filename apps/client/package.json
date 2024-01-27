@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "bun x vite",
     "build": "bun x vite build",
-    "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives",
+    "lint": "tsc --noEmit && eslint . --fix --ext ts,tsx --report-unused-disable-directives",
     "start": "bun x vite preview"
   },
   "main": "src/main.tsx",

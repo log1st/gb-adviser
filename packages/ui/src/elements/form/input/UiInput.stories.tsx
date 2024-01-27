@@ -19,6 +19,7 @@ const meta = {
 
 export const UiInputStory = {
   args: {
+    type: "text",
     // generated
     className: "className",
     e2e: "e2e",

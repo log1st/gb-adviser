@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "gen:cti": "cti ./src -b -t -v",
-    "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives"
+    "lint": "tsc --noEmit && eslint . --fix --ext ts,tsx --report-unused-disable-directives"
   },
   "devDependencies": {
     "bun-types": "latest",

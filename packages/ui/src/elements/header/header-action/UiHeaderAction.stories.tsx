@@ -19,6 +19,7 @@ const meta = {
 
 export const UiHeaderActionStory = {
   args: {
+    icon: "magnifier",
     // generated
     className: "className",
     e2e: "e2e",

@@ -1,4 +1,4 @@
-import { getRandomImage, loremIpsum } from "@gb-adviser/ui";
+import { getRandomImage } from "@gb-adviser/ui";
 import { api, ApiTag } from "../index.ts";
 
 export type AuthProfileOutput = {

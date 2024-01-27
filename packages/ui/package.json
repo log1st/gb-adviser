@@ -35,7 +35,7 @@
     "dev": "bun x storybook dev -p 6006 --no-open -c storybook",
     "build": "bun x storybook build -o dist -c storybook",
     "start": "bun x http-server dist",
-    "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives",
+    "lint": "tsc --noEmit && eslint . --fix --ext ts,tsx --report-unused-disable-directives",
     "gen:icons": "svgtofont -s src/assets/icons -o src/assets/fonts/icons -f icons && rm -rf src/assets/fonts/icons/react && bun scripts/importIconNames.ts",
     "gen:cti": "cti src/elements src/components src/containers src/utils src/providers src/hooks -b -i -v **/*.stories.tsx && bun run lint --quiet"
   }

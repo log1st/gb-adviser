@@ -19,6 +19,7 @@ const meta = {
 
 export const UiResponsiveUtilStory = {
   args: {
+    children: "children",
     // generated
     className: "className",
     e2e: "e2e",

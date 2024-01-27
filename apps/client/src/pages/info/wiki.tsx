@@ -17,6 +17,7 @@ export default function InfoWikiPage() {
   });
 
   const onSearch = (e: unknown) => {
+    // eslint-disable-next-line no-alert
     alert(JSON.stringify(e, null, 2));
   };
 

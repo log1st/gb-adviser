@@ -1,6 +1,8 @@
 import { CSSProperties } from "react";
 
-export type UiProps<T extends Record<string, unknown>> = T & {
+export type UiProps<
+  T extends Record<string, unknown> = Record<string, unknown>,
+> = T & {
   className?: string;
   style?: CSSProperties;
   e2e?: string;

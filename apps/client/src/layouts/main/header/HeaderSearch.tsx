@@ -8,6 +8,7 @@ export function HeaderSearch({ className }: UiClassName) {
   });
 
   const onSubmit = (e: unknown) => {
+    // eslint-disable-next-line no-alert
     alert(JSON.stringify(e, null, 2));
   };
 

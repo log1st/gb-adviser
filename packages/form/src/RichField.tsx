@@ -55,9 +55,9 @@ export function RichField<Payload extends FieldValues>({
           label={label}
           hint={hint}
           error={
-            field.fieldState.error
-              ? t(...JSON.parse(field.fieldState.error.message!))
-              : undefined
+            (field.fieldState.error
+              ? t(...(JSON.parse(field.fieldState.error.message!) as [string]))
+              : undefined) as unknown as ReactNode
           }
           required={required}
         >
