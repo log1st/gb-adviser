@@ -7,7 +7,7 @@
     "build": "bun x turbo run build",
     "start": "bun x turbo run start",
     "lint": "bun x turbo run lint",
-    "prepare": "husky install",
+    "prepare": "husky",
     "gen": "bun x turbo gen",
     "gen:cti": "bun x turbo run gen:cti"
   },
