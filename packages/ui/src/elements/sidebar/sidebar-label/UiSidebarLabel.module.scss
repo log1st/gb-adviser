@@ -1,0 +1,12 @@
+@import "../../../assets/utils";
+
+:root {
+  --sidebar-label-text: #A1A7C4;
+}
+
+.root {
+  padding: rm(12) rm(16);
+  color: var(--sidebar-label-text);
+
+  @include t-12-16();
+}

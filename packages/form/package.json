@@ -1,0 +1,25 @@
+{
+  "name": "@gb-adviser/form",
+  "module": "src/index.ts",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "gen:cti": "cti ./src -b -t -v",
+    "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@gb-adviser/eslint-config": "workspace:*",
+    "create-ts-index": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "react-hook-form": "^7.49.3",
+    "react": "^18.2.0",
+    "react-i18next": "^14.0.1",
+    "@gb-adviser/ui": "workspace:*",
+    "@gb-adviser/common": "workspace:*"
+  }
+}

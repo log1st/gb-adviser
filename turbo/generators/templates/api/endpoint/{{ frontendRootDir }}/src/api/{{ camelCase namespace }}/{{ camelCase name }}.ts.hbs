@@ -1,0 +1,17 @@
+import { api } from "../index.ts";
+
+export type {{ pascalCase namespace }}{{ pascalCase name }}Output = unknown;
+export type {{ pascalCase namespace }}{{ pascalCase name }}Input = unknown;
+
+export const {{ camelCase namespace }}{{ pascalCase name }}Endpoint = api.injectEndpoints({
+  endpoints: (build) => ({
+    {{ camelCase namespace }}{{ pascalCase name }}: build.{{ type }}<{{ pascalCase namespace }}{{ pascalCase name }}Output, {{ pascalCase namespace }}{{ pascalCase name }}Input>({
+      queryFn: (args) => ({
+        data: null
+      }),
+    }),
+  }),
+});
+
+export const use{{ pascalCase namespace }}{{ pascalCase name }} = () => 
+  {{ camelCase namespace }}{{ pascalCase name }}Endpoint.endpoints.{{ camelCase namespace }}{{ pascalCase name }}.use{{ pascalCase type }}();

@@ -1,0 +1,50 @@
+@import "mixins";
+
+:root {
+  font-size: 16px;
+
+  --root-background: #F5F6FA;
+}
+
+.root {
+  min-block-size: 100dvh;
+  display: flex;
+
+  background: var(--root-background);
+
+  > :first-child {
+    flex-grow: 1;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  cursor: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+  font-size: inherit;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type = "number"] {
+    appearance: textfield;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

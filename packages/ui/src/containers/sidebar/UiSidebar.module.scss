@@ -1,0 +1,12 @@
+@import "../../assets/utils";
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  padding: rm(16);
+
+  gap: rm(16);
+
+  overflow: auto;
+}

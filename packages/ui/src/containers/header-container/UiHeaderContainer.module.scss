@@ -1,0 +1,43 @@
+@import "../../assets/utils";
+
+:root {
+  --header-background: #FFFFFF;
+  --header-box-shadow: rgba(21, 34, 50, .08);
+  --header-padding: #{rm(20)} #{rm(28)};
+}
+
+.root {
+  display: flex;
+  align-items: center;
+
+  padding-inline: var(--header-padding);
+  block-size: rm(68);
+  gap: rm(40);
+
+  background: var(--header-background);
+  box-shadow: 0 rm(1) rm(4) var(--header-box-shadow);
+}
+
+.logo {
+  flex-basis: calc(var(--main-layout-side-width) - var(--header-padding));
+
+  cursor: pointer;
+}
+
+.search {
+  flex-grow: 1;
+  margin-inline-start: rm(60);
+}
+
+.actions {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: rm(20);
+}
+
+.side {
+  flex-shrink: 0;
+}

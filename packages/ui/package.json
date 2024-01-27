@@ -1,0 +1,42 @@
+{
+  "name": "@gb-adviser/ui",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest",
+    "@types/lodash-es": "^4.17.12",
+    "storybook": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-vite": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/test": "^7.6.6",
+    "react-dom": "^18.2.0",
+    "vite": "^5.0.11",
+    "http-server": "^14.1.1",
+    "@gb-adviser/eslint-config": "workspace:*",
+    "svgtofont": "^4.0.1",
+    "create-ts-index": "^1.14.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@gb-adviser/common": "workspace:*",
+    "react": "^18.2.0",
+    "date-fns": "^3.2.0",
+    "@floating-ui/react": "^0.26.4"
+  },
+  "scripts": {
+    "dev": "bun x storybook dev -p 6006 --no-open -c storybook",
+    "build": "bun x storybook build -o dist -c storybook",
+    "start": "bun x http-server dist",
+    "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives",
+    "gen:icons": "svgtofont -s src/assets/icons -o src/assets/fonts/icons -f icons && rm -rf src/assets/fonts/icons/react && bun scripts/importIconNames.ts",
+    "gen:cti": "cti src/elements src/components src/containers src/utils src/providers src/hooks -b -i -v **/*.stories.tsx && bun run lint --quiet"
+  }
+}

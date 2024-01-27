@@ -1,0 +1,19 @@
+{
+  "name": "@gb-adviser/common",
+  "module": "src/index.ts",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "gen:cti": "cti ./src -b -t -v",
+    "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "create-ts-index": "latest",
+    "@gb-adviser/eslint-config": "workspace:*",
+    "@total-typescript/ts-reset": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../assets/utils";
+
+.root {
+  border-radius: 100%;
+  @include size(36);
+  flex-shrink: 0;
+  overflow: hidden;
+}

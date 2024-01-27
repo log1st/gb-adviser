@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "icons";
+  src:
+    url("../../assets/fonts/icons/icons.woff2") format("woff2"),
+    url("../../assets/fonts/icons/icons.woff") format("woff");
+}
+
+.icon {
+  font-family: 'icons', sans-serif;
+  pointer-events: none;
+  display: block;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}

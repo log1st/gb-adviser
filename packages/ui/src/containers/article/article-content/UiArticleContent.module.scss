@@ -1,0 +1,14 @@
+@import "../../../assets/utils";
+
+:root {
+  --article-content: #131523;
+}
+
+.root {
+  @include t-16-24(400);
+  color: var(--article-content);
+
+  display: flex;
+  flex-direction: column;
+  gap: rm(20);
+}

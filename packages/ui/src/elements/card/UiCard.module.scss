@@ -1,0 +1,30 @@
+@import "../../assets/utils";
+
+:root {
+  --card-background: #FFFFFF;
+  --card-title: #131523;
+  --card-description: #131523;
+}
+
+.root {
+  padding: rm(28) rm(20) rm(28) rm(28);
+  border-radius: rm(6);
+
+  background: var(--card-background);
+}
+
+.title {
+  @include t-20-28();
+  color: var(--card-title)
+}
+
+.description {
+  @include t-14-20();
+  color: var(--card-description);
+
+  margin-block-start: rm(12);
+}
+
+.action {
+  margin-block-start: rm(20);
+}

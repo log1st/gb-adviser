@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": ["@gb-adviser/eslint-config"],
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": false
+  },
+  "ignorePatterns": [
+    "dist",
+    ".eslintrc"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [0]
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../assets/utils";
+
+:root {
+  --article-vote-summary: #5A607F;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  gap: rm(12);
+  margin-block-start: rm(-4);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: rm(12);
+}
+
+.summary {
+  color: var(--article-vote-summary);
+
+  @include t-12-16(400);
+}

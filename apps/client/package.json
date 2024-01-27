@@ -1,0 +1,44 @@
+{
+  "name": "@gb-adviser/client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun x vite",
+    "build": "bun x vite build",
+    "lint": "eslint . --fix --ext ts,tsx --report-unused-disable-directives",
+    "start": "bun x vite preview"
+  },
+  "main": "src/main.tsx",
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "react-json-view": "^1.21.3",
+    "@reduxjs/toolkit": "^2.0.1",
+    "react-redux": "^9.0.4",
+    "superjson": "^2.2.1",
+    "date-fns": "^3.2.0",
+    "@gb-adviser/form": "workspace:*",
+    "@gb-adviser/ui": "workspace:*",
+    "i18next": "^23.7.11",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-icu": "^2.3.0",
+    "i18next-resources-to-backend": "^1.2.0",
+    "react-i18next": "^13.5.0",
+    "intl-messageformat": "^10.5.8",
+    "react-router-dom": "^6.21.0",
+    "reduxjs-toolkit-persist": "^7.2.1",
+    "jotai": "^2.6.0",
+    "usehooks-ts": "^2.9.2",
+    "react-use": "^17.4.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@gb-adviser/eslint-config": "workspace:*",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "sass": "^1.69.5",
+    "@total-typescript/ts-reset": "^0.5.1"
+  }
+}

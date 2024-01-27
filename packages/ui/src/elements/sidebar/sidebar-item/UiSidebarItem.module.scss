@@ -1,0 +1,70 @@
+@import "../../../assets/utils";
+
+:root {
+  --sidebar-item-icon: #7e84a3;
+  --sidebar-item-text: #5a607f;
+  --sidebar-item-active-background: #1e5eff;
+  --sidebar-item-active-text: #FFFFFF;
+
+  --sidebar-item-badge-background: #131523;
+  --sidebar-item-badge-text: #FFFFFF;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+
+  padding: rm(10)  rm(12) rm(10) rm(16);
+  min-block-size: rm(44);
+  gap: rm(16);
+
+  border-radius: rm(4);
+
+  cursor: pointer;
+
+  background: var(--sidebar-item-background);
+
+  &:not(:has(.icon)) {
+    padding-inline-start: rm(20);
+  }
+}
+
+.before {
+  flex-shrink: 0;
+}
+
+.icon {
+  @include icon(24);
+
+  color: var(--sidebar-item-icon);
+}
+
+.label {
+  @include t-14-20();
+
+  color: var(--sidebar-item-text);
+
+  flex-grow: 1;
+
+  text-align: left;
+}
+
+.badge {
+  background: var(--sidebar-item-badge-background);
+  color: var(--sidebar-item-badge-text);
+
+  padding: 0 rm(6);
+  border-radius: rm(100);
+
+  @include t-12-16(700);
+
+  &:empty {
+    display: none;
+  }
+}
+
+.active {
+  --sidebar-item-background: var(--sidebar-item-active-background);
+  --sidebar-item-text: var(--sidebar-item-active-text);
+  --sidebar-item-icon: var(--sidebar-item-active-text);
+}

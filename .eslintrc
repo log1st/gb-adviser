@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": ["@gb-adviser/eslint-config"],
+  "env": {
+    "browser": false,
+    "es2020": true,
+    "node": true
+  }
+}

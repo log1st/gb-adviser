@@ -1,0 +1,19 @@
+@import "../../../assets/utils";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: rm(20);
+}
+
+.title {
+  color: var(--article-block-title);
+  @include t-20-28(700);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: rm(24);
+  margin-block-start: rm(4);
+}

@@ -1,0 +1,35 @@
+@import "../../../assets/utils";
+
+:root {
+  --dropdown-trigger-text: #5A607F;
+  --dropdown-trigger-icon: #7E84A3;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+
+  gap: rm(12);
+
+  cursor: pointer;
+}
+
+.before,
+.after {
+  flex-shrink: 0;
+}
+
+.label {
+  color: var(--dropdown-trigger-text);
+
+  @include t-14-20(500);
+}
+
+.icon {
+  @include icon(24);
+  color: var(--dropdown-trigger-icon);
+}
+
+.after {
+  margin-inline-start: rm(6);
+}

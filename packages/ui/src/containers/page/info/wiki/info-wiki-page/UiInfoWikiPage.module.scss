@@ -1,0 +1,82 @@
+@import "../../../../../assets/utils";
+
+:root {
+  --page-title-text: #131523;
+  --page-content-background: #FFFFFF;
+  --page-content-shadow:  0 #{rm(1)} #{rm(4)} rgba(21, 34, 50, 0.08);
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  gap: rm(2);
+}
+
+.back {
+  align-self: flex-start;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  block-size: 0;
+
+  gap: rm(30);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: rm(30);
+
+  align-self: flex-start;
+
+  flex-basis: rm(255);
+
+  flex-shrink: 0;
+}
+
+.title {
+  color: var(--page-title-text);
+
+  @include t-24-36();
+}
+
+.body {
+  margin-block-start: rm(22);
+
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: rm(4);
+
+  border-radius: rm(4);
+
+  overflow: auto;
+}
+
+.search {
+  flex-shrink: 0;
+
+  position: sticky;
+  inset-block-start: 0;
+}
+
+.inner {
+  flex-grow: 1;
+
+  background: var(--page-content-background);
+  box-shadow: var(--page-content-shadow);
+
+  border-radius: rm(4);
+}
+
+.footer {
+  margin-block-start: rm(26);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rm(29);
+}

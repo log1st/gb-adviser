@@ -1,0 +1,32 @@
+@import "../../assets/utils";
+
+:root {
+  --tabs-tab-text: #5A607F;
+  --tabs-tab-active-text: #1E5EFF;
+  --tabs-border: #E6E9F4;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: rm(32);
+
+  box-shadow: inset 0 rm(-1) 0 var(--tabs-border);
+}
+
+.tab {
+  --tab-color: var(--tabs-tab-text);
+  padding-block: rm(16);
+
+  color: var(--tab-color);
+
+  @include t-16-24(500);
+
+  cursor: pointer;
+
+  &.active {
+    --tab-color: var(--tabs-tab-active-text);
+
+    box-shadow: inset 0 rm(-2) 0 currentColor;
+  }
+}

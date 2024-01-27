@@ -1,0 +1,30 @@
+{
+  "name": "@gb-adviser/root",
+  "module": "index.ts",
+  "private": true,
+  "scripts": {
+    "dev": "bun x turbo run dev",
+    "build": "bun x turbo run build",
+    "start": "bun x turbo run start",
+    "lint": "bun x turbo run lint",
+    "prepare": "husky install",
+    "gen": "bun x turbo gen",
+    "gen:cti": "bun x turbo run gen:cti"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^18.5.0",
+    "@commitlint/config-conventional": "^18.5.0",
+    "@gb-adviser/eslint-config": "workspace:*",
+    "@turbo/gen": "^1.11.3",
+    "bun-types": "latest",
+    "husky": "^9.0.1",
+    "turbo": "^1.11.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../assets/utils";
+
+.root {
+  display: block;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.scale-down {
+  object-fit: scale-down;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.none {
+  object-fit: none;
+}
+
+.fill {
+  object-fit: fill;
+}

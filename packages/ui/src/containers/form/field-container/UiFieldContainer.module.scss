@@ -1,0 +1,29 @@
+@import "../../../assets/utils";
+
+.root {
+
+}
+
+.label {
+  &:empty {
+    display: none;
+  }
+}
+
+.field {
+  &:empty {
+    display: none;
+  }
+}
+
+.hint {
+  &:empty {
+    display: none;
+  }
+}
+
+.error {
+  &:empty {
+    display: none;
+  }
+}

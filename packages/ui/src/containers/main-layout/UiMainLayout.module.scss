@@ -1,0 +1,52 @@
+@import "../../assets/utils";
+
+:root {
+  --main-layout-side-width: #{rm(250)};
+  --main-layout-side-divider: #D7DBEC;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.content {
+  display: flex;
+
+  flex-grow: 1;
+
+  block-size: 0;
+}
+
+.sidebar {
+  display: flex;
+
+  flex-shrink: 0;
+  flex-basis: var(--main-layout-side-width);
+
+  box-shadow: inset rm(-1) 0 0 0 var(--main-layout-side-divider);
+
+  &:empty {
+    display: none;
+  }
+
+  > :first-child {
+    flex-grow: 1;
+  }
+}
+
+.body {
+  display: flex;
+
+  flex-grow: 1;
+
+  padding: rm(30) rm(40) rm(40);
+
+  > :first-child {
+    flex-grow: 1;
+  }
+}

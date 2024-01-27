@@ -1,0 +1,33 @@
+import { Meta, StoryObj } from "@storybook/react";
+import { Ui{{ pascalCase name }} } from "./Ui{{ pascalCase name }}.tsx";
+
+const meta = {
+  title: "{{ pascalCase type }}s/Ui{{ pascalCase name }}",
+  component: Ui{{ pascalCase name }},
+  parameters: {
+    layout: "centered",
+  },
+  argTypes: {
+
+
+    className: {
+      type: "string"
+    },
+    e2e: {
+      type: "string"
+    },
+  },
+} satisfies Meta<typeof Ui{{ pascalCase name }}>;
+
+export const Ui{{ pascalCase name }}Story = {
+  args: {
+
+    // generated
+    className: "className",
+    e2e: "e2e",
+    style: {},
+  },
+  name: "Ui{{ pascalCase name }}"
+} satisfies StoryObj<typeof meta>;
+
+export default meta;

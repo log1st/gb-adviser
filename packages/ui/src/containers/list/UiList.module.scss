@@ -1,0 +1,47 @@
+@import "../../assets/utils";
+
+:root {
+  --list-badge-background: #F5F6FA;
+  --list-badge-text: #5A607F;
+  --list-content: #131523;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: rm(20);
+
+  // Maybe can be deleted
+  margin-block-start: rm(-4);
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: rm(24);
+}
+
+.badge {
+  flex-shrink: 0;
+
+  @include size(36);
+  @include t-16-24(500);
+  border-radius: rm(36);
+
+  background: var(--list-badge-background);
+  color: var(--list-badge-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.content {
+  flex-grow: 1;
+
+  @include t-16-24(400);
+
+  color: var(--list-content);
+}

@@ -1,0 +1,12 @@
+@import "../../assets/utils";
+
+:root {
+  --delimiter: #E6E9F4;
+}
+
+.root {
+  block-size: rm(1);
+  flex-shrink: 0;
+  background: var(--delimiter);
+  margin-block-end: rm(12);
+}

@@ -1,0 +1,28 @@
+@import "../../assets/utils";
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  padding: rm(28);
+  gap: rm(28);
+}
+
+.delimiter {
+  &:has(+ .footer:not(:empty)) {
+    margin-block-end: 0;
+  }
+
+  &:not(:has(+ .footer:not(:empty))) {
+    display: none;
+  }
+}
+
+.footer {
+  padding: rm(40) rm(28);
+}

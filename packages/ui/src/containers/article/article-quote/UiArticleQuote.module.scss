@@ -1,0 +1,20 @@
+@import "../../../assets/utils";
+
+:root {
+  --article-quote-text: #5A607F;
+  --article-quote-background: #F5F6FA;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  gap: rm(4);
+  padding: rm(20);
+  border-radius: rm(4);
+
+  @include t-16-24(500);
+
+  background: var(--article-quote-background);
+  color: var(--article-quote-text);
+}

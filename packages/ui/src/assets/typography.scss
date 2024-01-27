@@ -1,0 +1,35 @@
+@import "functions";
+
+@mixin t($fontFamily, $fontSize: 16px, $fontWeight: 400, $lineHeight: auto, $letterSpacing: 0) {
+  font: $fontWeight rm($fontSize) $fontFamily, sans-serif;
+  line-height: rm($lineHeight);
+  letter-spacing: rm($letterSpacing);
+}
+
+@mixin t-button($fontWeight: 500) {
+  @include t("Inter", 16, $fontWeight, 24);
+}
+
+@mixin t-12-16($fontWeight: 600) {
+  @include t("Inter", 12, $fontWeight, 16);
+}
+
+@mixin t-14-20($fontWeight: 500) {
+  @include t("Inter", 14, $fontWeight, 20);
+}
+
+@mixin t-16-24($fontWeight: 500) {
+  @include t("Inter", 16, $fontWeight, 24);
+}
+
+@mixin t-13-20($fontWeight: 500) {
+  @include t("Inter", 13, $fontWeight, 16);
+}
+
+@mixin t-24-36($fontWeight: 700, $letterSpacing: .16) {
+  @include t("Inter", 24, $fontWeight, 36, $letterSpacing);
+}
+
+@mixin t-20-28($fontWeight: 700) {
+  @include t("Inter", 20, $fontWeight, 28);
+}

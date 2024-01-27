@@ -1,0 +1,46 @@
+@import "../../../assets/utils";
+
+:root {
+  --header-action-icon: #7E84A3;
+  --header-action-badge-background: #1E5EFF;
+  --header-action-badge-text: #FFFFFF;
+}
+
+.root {
+  color: var(--header-action-icon);
+
+  position: relative;
+
+  display: block;
+  align-items: center;
+  justify-self: center;
+
+  cursor: pointer;
+}
+
+.icon {
+  @include icon(24);
+}
+
+.badge {
+  position: absolute;
+
+  @include size(16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: var(--header-action-badge-background);
+  color: var(--header-action-badge-text);
+
+  border-radius: rm(100);
+
+  @include t-12-16(700);
+
+  inset: rm(-4) rm(-4) auto auto;
+
+  &:empty {
+    display: none;
+  }
+}

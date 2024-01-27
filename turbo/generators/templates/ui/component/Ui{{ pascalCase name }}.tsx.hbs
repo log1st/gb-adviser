@@ -1,0 +1,21 @@
+import { clsx } from "@gb-adviser/common";
+import { Ui{{ pascalCase name }}Props } from "./Ui{{ pascalCase name }}Props.ts";
+
+import styles from "./Ui{{ pascalCase name }}.module.scss";
+
+export function Ui{{ pascalCase name }}({
+  e2e,
+  style,
+  className,
+}: Ui{{ pascalCase name }}Props) {
+  return (
+    <div
+      className={clsx(
+        styles.root,
+        className,
+      )}
+      style={style}
+      data-e2e={e2e}
+    />
+  );
+}
