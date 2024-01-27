@@ -1,4 +1,9 @@
-import { UiButton, UiInput, UiInfoWikiPage } from "@gb-adviser/ui";
+import {
+  UiButton,
+  UiInput,
+  UiInfoWikiPage,
+  UiResponsiveUtil,
+} from "@gb-adviser/ui";
 import { useTranslation } from "react-i18next";
 import { RichField, RichForm } from "@gb-adviser/form";
 import { getIndexRoute } from "../../providers/routes.ts";
@@ -36,7 +41,14 @@ export default function InfoWikiPage() {
           </RichField>
         </RichForm>
       }
-      title={t("title")}
+      title={
+        <>
+          <div>{t("title")}</div>
+          <UiResponsiveUtil mobile wider hide>
+            <InfoWikiSidebar tabs />
+          </UiResponsiveUtil>
+        </>
+      }
       menu={<InfoWikiSidebar />}
       footer={<InfoWikiFooter />}
     >

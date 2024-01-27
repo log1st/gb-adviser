@@ -1,4 +1,4 @@
-import { UiHeaderAction } from "@gb-adviser/ui";
+import { UiHeaderAction, UiResponsiveUtil } from "@gb-adviser/ui";
 import { useNotificationsCount } from "../../../api/notifications/count.ts";
 
 export function HeaderActions() {
@@ -6,6 +6,9 @@ export function HeaderActions() {
 
   return (
     <>
+      <UiResponsiveUtil small wider hide>
+        <UiHeaderAction icon="magnifier" />
+      </UiResponsiveUtil>
       <UiHeaderAction icon="comment" />
       <UiHeaderAction icon="bell" badge={data} />
     </>

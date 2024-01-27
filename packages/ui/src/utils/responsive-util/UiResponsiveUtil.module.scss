@@ -1,0 +1,97 @@
+@import "../../assets/utils";
+
+.tighter {
+  &.hide {
+    &.small {
+      @include small() {
+        display: none;
+      }
+    }
+    &.mobile {
+      @include mobile() {
+        display: none;
+      }
+    }
+    &.tablet {
+      @include tablet() {
+        display: none;
+      }
+    }
+    &.desktop {
+      @include desktop() {
+        display: none;
+      }
+    }
+  }
+
+  &.show {
+    &.small {
+      @include small() {
+        display: initial;
+      }
+    }
+    &.mobile {
+      @include mobile() {
+        display: initial;
+      }
+    }
+    &.tablet {
+      @include tablet() {
+        display: initial;
+      }
+    }
+    &.desktop {
+      @include desktop() {
+        display: initial;
+      }
+    }
+  }
+}
+
+.wider {
+  &.hide {
+    &.small {
+      @include wider-than-small() {
+        display: none;
+      }
+    }
+    &.mobile {
+      @include wider-than-mobile() {
+        display: none;
+      }
+    }
+    &.tablet {
+      @include wider-than-tablet() {
+        display: none;
+      }
+    }
+    &.desktop {
+      @include wider-than-desktop() {
+        display: none;
+      }
+    }
+  }
+
+  &.show {
+    &.small {
+      @include wider-than-small() {
+        display: initial;
+      }
+    }
+    &.mobile {
+      @include wider-than-mobile() {
+        display: initial;
+      }
+    }
+    &.tablet {
+      @include wider-than-tablet() {
+        display: initial;
+      }
+    }
+    &.desktop {
+      @include wider-than-desktop() {
+        display: initial;
+      }
+    }
+  }
+}

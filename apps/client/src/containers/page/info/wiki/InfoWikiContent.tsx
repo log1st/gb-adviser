@@ -6,7 +6,7 @@ import {
   UiTabsProps,
 } from "@gb-adviser/ui";
 import { useTranslation } from "react-i18next";
-import { randomNumber } from "@gb-adviser/common";
+import { KeyedKey, randomNumber } from "@gb-adviser/common";
 import { useMemo, useState } from "react";
 
 export function InfoWikiContent() {
@@ -18,7 +18,7 @@ export function InfoWikiContent() {
 
   const [voted, setVoted] = useState<boolean | null>(null);
 
-  const [additionalTab, setAdditionalTab] = useState(11);
+  const [additionalTab, setAdditionalTab] = useState<KeyedKey>(11);
 
   const additionalTabs = useMemo<UiTabsProps["tabs"]>(
     () =>

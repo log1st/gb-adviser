@@ -11,6 +11,12 @@
 }
 
 .field {
+  flex-grow: 1;
+  display: flex;
+  > :first-child {
+    flex-grow: 1;
+  }
+
   &:empty {
     display: none;
   }

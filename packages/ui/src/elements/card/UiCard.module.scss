@@ -28,3 +28,22 @@
 .action {
   margin-block-start: rm(20);
 }
+
+@include desktop() {
+  .root {
+    padding: rm(16);
+  }
+
+  .title {
+    @include t-16-24();
+  }
+
+  .description {
+    margin-block-start: rm(8);
+    @include t-13-20(400);
+  }
+
+  .action {
+    margin-block-start: rm(10);
+  }
+}

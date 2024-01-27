@@ -2,10 +2,7 @@ import { UiSidebar, UiSidebarItemProps } from "@gb-adviser/ui";
 import { useTranslation } from "react-i18next";
 import { Keyed } from "@gb-adviser/common";
 import { ReactNode, useMemo } from "react";
-import {
-  getIndexRoute,
-  getInfoWikiRoute,
-} from "../../providers/routes.ts";
+import { getIndexRoute, getInfoWikiRoute } from "../../providers/routes.ts";
 
 type MenuType = {
   label?: ReactNode;

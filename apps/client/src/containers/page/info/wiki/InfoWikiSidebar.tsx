@@ -1,10 +1,19 @@
-import { UiSidebar, UiSidebarItemProps } from "@gb-adviser/ui";
+import {
+  UiClassName,
+  UiSidebar,
+  UiSidebarItemProps,
+  UiTabs,
+} from "@gb-adviser/ui";
 import { useTranslation } from "react-i18next";
 import { Keyed } from "@gb-adviser/common";
 import { useMemo } from "react";
 import { getInfoWikiRoute } from "../../../../providers/routes.ts";
 
-export function InfoWikiSidebar() {
+export type InfoWikiSidebarProps = UiClassName & {
+  tabs?: boolean;
+};
+
+export function InfoWikiSidebar({ tabs, className }: InfoWikiSidebarProps) {
   const { t } = useTranslation("pages", {
     keyPrefix: "info.wiki.menu",
   });
@@ -40,8 +49,19 @@ export function InfoWikiSidebar() {
     [t],
   );
 
+  if (tabs) {
+    return (
+      <UiTabs
+        className={className}
+        whitespace
+        value={items[0].key}
+        tabs={items}
+      />
+    );
+  }
+
   return (
-    <UiSidebar.Group>
+    <UiSidebar.Group className={className}>
       {items.map((item) => (
         <UiSidebar.Item {...item} key={item.key} />
       ))}

@@ -2,6 +2,7 @@
 
 export * from "./article";
 export * from "./form";
+export * from "./header";
 export * from "./header-container";
 export * from "./list";
 export * from "./main-layout";

@@ -10,3 +10,9 @@
   background: var(--delimiter);
   margin-block-end: rm(12);
 }
+
+@include desktop() {
+  .root {
+    margin: 0;
+  }
+}

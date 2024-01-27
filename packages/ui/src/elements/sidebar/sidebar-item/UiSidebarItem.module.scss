@@ -68,3 +68,47 @@
   --sidebar-item-text: var(--sidebar-item-active-text);
   --sidebar-item-icon: var(--sidebar-item-active-text);
 }
+
+@include desktop() {
+  .root {
+    padding: rm(6) rm(10);
+    min-block-size: rm(32);
+    gap: rm(10);
+
+    &:not(:has(.icon)) {
+      padding-inline-start: rm(10);
+    }
+  }
+
+  .icon {
+    @include icon(20);
+  }
+
+  .label {
+    @include t-12-16(400);
+  }
+
+  .badge {
+    @include t-11-14();
+    padding: 0 rm(4);
+  }
+}
+
+@include tablet() {
+  .root {
+    position: relative;
+
+    &:has(.icon) {
+      .label {
+        display: none;
+      }
+
+      .badge {
+        position: absolute;
+        inset: rm(1) rm(1) auto auto;
+        padding: rm(2);
+        @include t-10-12();
+      }
+    }
+  }
+}

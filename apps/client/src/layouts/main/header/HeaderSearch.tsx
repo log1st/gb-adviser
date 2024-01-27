@@ -1,8 +1,8 @@
-import { UiInput } from "@gb-adviser/ui";
+import { UiClassName, UiHeaderSearch, UiInput } from "@gb-adviser/ui";
 import { useTranslation } from "react-i18next";
 import { RichField, RichForm } from "@gb-adviser/form";
 
-export function HeaderSearch() {
+export function HeaderSearch({ className }: UiClassName) {
   const { t } = useTranslation("header", {
     keyPrefix: "search",
   });
@@ -12,20 +12,22 @@ export function HeaderSearch() {
   };
 
   return (
-    <RichForm
-      defaultValues={{
-        search: "",
-      }}
-      mutate={onSubmit}
-    >
-      <RichField name="search">
-        <UiInput
-          before="magnifier"
-          type="search"
-          placeholder={t("placeholder")}
-          variant="headerSearch"
-        />
-      </RichField>
-    </RichForm>
+    <UiHeaderSearch className={className}>
+      <RichForm
+        defaultValues={{
+          search: "",
+        }}
+        mutate={onSubmit}
+      >
+        <RichField name="search">
+          <UiInput
+            before="magnifier"
+            type="search"
+            placeholder={t("placeholder")}
+            variant="headerSearch"
+          />
+        </RichField>
+      </RichForm>
+    </UiHeaderSearch>
   );
 }

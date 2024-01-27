@@ -33,3 +33,19 @@
 .after {
   margin-inline-start: rm(6);
 }
+
+@include desktop() {
+  .root {
+    gap: rm(6);
+  }
+
+  .after {
+    margin-inline-start: 0;
+  }
+}
+
+@include tablet() {
+  .label {
+    display: none;
+  }
+}

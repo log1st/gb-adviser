@@ -10,3 +10,15 @@
 
   @include t-12-16();
 }
+
+.root {
+  padding: rm(6) rm(10);
+  min-block-size: rm(32);
+  gap: rm(10);
+}
+
+@include tablet() {
+  .root {
+    display: none;
+  }
+}

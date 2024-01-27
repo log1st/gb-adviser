@@ -18,3 +18,12 @@
   background: var(--article-quote-background);
   color: var(--article-quote-text);
 }
+
+@include desktop() {
+  .root {
+    padding: rm(10);
+
+    @include t-14-20(400);
+    gap: rm(2);
+  }
+}

@@ -10,3 +10,10 @@
 
   overflow: auto;
 }
+
+@include desktop() {
+  .root {
+    padding: rm(10);
+    gap: rm(10);
+  }
+}

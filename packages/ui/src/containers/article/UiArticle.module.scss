@@ -26,3 +26,14 @@
 .footer {
   padding: rm(40) rm(28);
 }
+
+@include desktop() {
+  .content {
+    padding: rm(16);
+    gap: rm(16);
+  }
+
+  .footer {
+    padding: rm(20) rm(16);
+  }
+}

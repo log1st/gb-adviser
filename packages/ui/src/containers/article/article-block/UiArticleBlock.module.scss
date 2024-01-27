@@ -16,4 +16,21 @@
   flex-direction: column;
   gap: rm(24);
   margin-block-start: rm(4);
+
+  @include t-16-24();
+}
+
+@include desktop() {
+  .root {
+    gap: rm(10);
+  }
+
+  .title {
+    @include t-16-24();
+  }
+
+  .content {
+    margin-block-start: 0;
+    gap: rm(16);
+  }
 }

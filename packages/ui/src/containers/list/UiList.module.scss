@@ -45,3 +45,24 @@
 
   color: var(--list-content);
 }
+
+@include desktop() {
+  .root {
+    gap: rm(10);
+    margin-block-start: 0;
+  }
+
+  .item {
+    gap: rm(16);
+  }
+
+  .badge {
+    @include size(24);
+    border-radius: rm(24);
+    @include t-12-16(400);
+  }
+
+  .content {
+    @include t-12-16(400);
+  }
+}

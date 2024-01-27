@@ -9,3 +9,7 @@ export type UiProps<T extends Record<string, unknown>> = T & {
 export type UiNativeProps = Omit<UiProps<Record<string, unknown>>, "e2e"> & {
   "data-e2e"?: string;
 };
+
+export type UiClassName = {
+  className?: string;
+};

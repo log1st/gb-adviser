@@ -4,6 +4,10 @@
   --header-background: #FFFFFF;
   --header-box-shadow: rgba(21, 34, 50, .08);
   --header-padding: #{rm(20)} #{rm(28)};
+
+  @include desktop() {
+    --header-padding: #{rm(16)};
+  }
 }
 
 .root {
@@ -22,9 +26,14 @@
   flex-basis: calc(var(--main-layout-side-width) - var(--header-padding));
 
   cursor: pointer;
+
+  padding-block: rm(10);
 }
 
 .search {
+  align-self: normal;
+  display: flex;
+
   flex-grow: 1;
   margin-inline-start: rm(60);
 }
@@ -40,4 +49,41 @@
 
 .side {
   flex-shrink: 0;
+}
+
+@include desktop() {
+  .root {
+    block-size: rm(54);
+    gap: rm(24);
+  }
+
+  .logo {
+    img {
+      block-size: rm(32);
+    }
+  }
+
+  .search {
+    margin-inline-start: 0;
+  }
+}
+
+@include tablet() {
+  .logo {
+    flex-basis: auto;
+
+    img {
+      block-size: rm(28);
+    }
+  }
+}
+
+@include small() {
+  .search {
+    display: none;
+  }
+
+  .actions {
+    margin-inline-start: auto;
+  }
 }

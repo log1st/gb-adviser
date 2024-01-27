@@ -10,4 +10,5 @@ export type UiTabsProps = UiProps<{
   tabs?: Array<Keyed<UiTabItem>>;
   value?: KeyedKey;
   onChange?(value: KeyedKey): void;
+  whitespace?: boolean;
 }>;

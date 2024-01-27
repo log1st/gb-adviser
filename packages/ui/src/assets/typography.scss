@@ -14,6 +14,14 @@
   @include t("Inter", 12, $fontWeight, 16);
 }
 
+@mixin t-11-14($fontWeight: 600) {
+  @include t("Inter", 11, $fontWeight, 14);
+}
+
+@mixin t-10-12($fontWeight: 600) {
+  @include t("Inter", 10, $fontWeight, 12);
+}
+
 @mixin t-14-20($fontWeight: 500) {
   @include t("Inter", 14, $fontWeight, 20);
 }

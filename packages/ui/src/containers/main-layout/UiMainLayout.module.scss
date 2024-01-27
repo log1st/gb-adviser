@@ -3,6 +3,10 @@
 :root {
   --main-layout-side-width: #{rm(250)};
   --main-layout-side-divider: #D7DBEC;
+
+  @include desktop() {
+    --main-layout-side-width: #{rm(200)};
+  }
 }
 
 .root {
@@ -48,5 +52,21 @@
 
   > :first-child {
     flex-grow: 1;
+  }
+}
+
+@include desktop() {
+  .body {
+    padding: rm(16);
+  }
+}
+
+@include tablet() {
+  .body {
+    padding: rm(10);
+  }
+
+  .sidebar {
+    flex-basis: auto;
   }
 }

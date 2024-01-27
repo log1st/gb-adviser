@@ -80,3 +80,63 @@
   grid-template-columns: repeat(2, 1fr);
   gap: rm(29);
 }
+
+@include desktop() {
+  .content {
+    gap: rm(16);
+  }
+
+  .back {
+    display: none;
+  }
+
+  .nav {
+    gap: rm(10);
+
+    flex-basis: rm(210);
+  }
+
+  .title {
+    @include t-20-28();
+  }
+
+  .body {
+    margin-block-start: 0;
+  }
+
+  .footer {
+    margin-block-start: rm(16);
+    gap: rm(16);
+  }
+}
+
+@include tablet() {
+  .title {
+    @include t-16-24();
+  }
+
+  .nav {
+    flex-basis: rm(160);
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include mobile() {
+  .content {
+    flex-direction: column;
+    gap: rm(10);
+    padding: rm(6);
+  }
+
+  .nav {
+    flex-basis: auto;
+    align-self: auto;
+  }
+
+  .menu {
+    display: none;
+  }
+}

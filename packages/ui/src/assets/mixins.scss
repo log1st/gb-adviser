@@ -15,10 +15,16 @@
 $small: 520;
 $mobile: 768;
 $tablet: 992;
-$wide: 1170;
+$dekstop: 1070;
 
 @mixin small() {
     @include tighter($small) {
+        @content;
+    }
+}
+
+@mixin wider-than-small {
+    @include wider($small) {
         @content;
     }
 }
@@ -47,14 +53,14 @@ $wide: 1170;
     }
 }
 
-@mixin wide() {
-    @include tighter($wide) {
+@mixin desktop() {
+    @include tighter($dekstop) {
         @content;
     }
 }
 
-@mixin wider-than-wide() {
-    @include wider($wide) {
+@mixin wider-than-desktop() {
+    @include wider($dekstop) {
         @content;
     }
 }

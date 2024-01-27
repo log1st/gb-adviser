@@ -8,10 +8,19 @@
 
 .root {
   display: flex;
+
+  box-shadow: inset 0 rm(-1) 0 var(--tabs-border);
+
+  overflow: auto;
+}
+
+.list {
+  display: flex;
   align-items: center;
   gap: rm(32);
 
-  box-shadow: inset 0 rm(-1) 0 var(--tabs-border);
+  flex-grow: 1;
+  inline-size: 0;
 }
 
 .tab {
@@ -28,5 +37,20 @@
     --tab-color: var(--tabs-tab-active-text);
 
     box-shadow: inset 0 rm(-2) 0 currentColor;
+  }
+}
+
+.whitespace {
+  white-space: nowrap;
+}
+
+@include desktop() {
+  .list {
+    gap: rm(16);
+  }
+
+  .tab {
+    padding-block: rm(10);
+    @include t-14-20(400);
   }
 }
